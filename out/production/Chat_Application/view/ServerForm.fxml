@@ -48,11 +48,11 @@
             <Font name="System Bold" size="27.0" />
          </font>
       </Label>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="319.0" layoutY="589.0" onMouseClicked="#btnSendEmojiOnAction" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="319.0" layoutY="589.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/happy.png" />
          </image></ImageView>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="366.0" layoutY="589.0" onMouseClicked="#btnSendPhotoOnAction" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="366.0" layoutY="589.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/photograph.png" />
          </image></ImageView>

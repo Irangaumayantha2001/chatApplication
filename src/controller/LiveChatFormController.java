@@ -76,4 +76,10 @@ public class LiveChatFormController extends Thread{
     public void btnSendOnAction(MouseEvent mouseEvent) {
         send();
     }
+
+    public void btnSendEmojiOnAction(MouseEvent mouseEvent) {
+    }
+
+    public void btnSendPhotoOnAction(MouseEvent mouseEvent) {
+    }
 }
