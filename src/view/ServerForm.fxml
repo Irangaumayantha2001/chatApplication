@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="635.0" prefWidth="493.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LiveChatFormController">
+   <children>
+      <ImageView fitHeight="576.0" fitWidth="489.0" layoutX="4.0" layoutY="58.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/wallpaper.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="-1.0" prefHeight="59.0" prefWidth="493.0" style="-fx-background-color: #594cf1;" />
+      <Label layoutX="72.0" layoutY="11.0" text="Live" textFill="RED">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="135.0" layoutY="14.0" text="Chat">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtAreaAllText" layoutX="15.0" layoutY="69.0" prefHeight="498.0" prefWidth="467.0" />
+      <TextField fx:id="txtMessage" layoutX="15.0" layoutY="585.0" prefHeight="41.0" prefWidth="400.0" style="-fx-background-radius: 20;" />
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="11.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/live-chat.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="439.0" layoutY="589.0" onMouseClicked="#btnSendOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/sent.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="248.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/user.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblname" layoutX="295.0" layoutY="14.0" text="username">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="319.0" layoutY="589.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/happy.png" />
+         </image></ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="366.0" layoutY="589.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/photograph.png" />
+         </image></ImageView>
+   </children>
+</AnchorPane>
