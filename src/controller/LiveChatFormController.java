@@ -73,11 +73,18 @@ public class LiveChatFormController extends Thread{
         }
     }
 
+    public void sendEmoji(){
+
+        txtMessage.setText(txtMessage.getText()+"../img/smilee.png");
+    }
+
     public void btnSendOnAction(MouseEvent mouseEvent) {
         send();
     }
 
     public void btnSendEmojiOnAction(MouseEvent mouseEvent) {
+        sendEmoji();
+
     }
 
     public void btnSendPhotoOnAction(MouseEvent mouseEvent) {
