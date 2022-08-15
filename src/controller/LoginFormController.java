@@ -25,7 +25,7 @@ public class LoginFormController {
         Stage stage2=new Stage();
         stage2.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/ServerForm.fxml"))));
         stage2.setResizable(false);
-        stage2.setTitle("sample title");
+        stage2.setTitle("Live-Chat");
         stage2.centerOnScreen();
         stage2.show();
     }
