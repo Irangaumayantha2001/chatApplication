@@ -75,7 +75,8 @@ public class LiveChatFormController extends Thread{
 
     public void sendEmoji(){
 
-        txtMessage.setText(txtMessage.getText()+"../img/smilee.png");
+        txtMessage.setText(txtMessage.getText()+"\uD83D\uDE00");
+
     }
 
     public void btnSendOnAction(MouseEvent mouseEvent) {
