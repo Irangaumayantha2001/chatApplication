@@ -6,12 +6,16 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import org.apache.commons.lang.ArrayUtils;
+import server.clientHandler;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.*;
 import java.net.Socket;
+import java.nio.ByteBuffer;
 
 public class LiveChatFormController extends Thread{
     public AnchorPane context;
@@ -22,6 +26,13 @@ public class LiveChatFormController extends Thread{
     BufferedReader reader;
     PrintWriter writer;
     Socket socket;
+
+    Stage stage;
+    FileChooser fileChooser;
+    clientHandler ClientHandler;
+
+    byte[] payload;
+    byte[] header;
 
     public void initialize(){
         lblname.setText(LoginFormController.username);
@@ -79,6 +90,32 @@ public class LiveChatFormController extends Thread{
 
     }
 
+    public void sendPhoto() throws IOException {
+      /*  File selectedFile = fileChooser.showOpenDialog(stage);
+
+        if (selectedFile!=null) {
+
+            String[] res = selectedFile.getName().split("\\.");
+
+            BufferedImage finalImage = ImageIO.read(selectedFile);
+
+            ByteArrayOutputStream bout = new ByteArrayOutputStream();
+            ImageIO.write(finalImage, res[1], bout);
+
+            payload = bout.toByteArray();
+            header = ByteBuffer.allocate(4).putInt(payload.length).array();
+
+            byte[] frame = ArrayUtils.addAll(header,payload);
+
+            ClientHandler.getOut().write(-1);
+            ClientHandler.getOut().write(frame);
+
+            ClientHandler.getOut().flush();
+
+        }
+*/
+    }
+
     public void btnSendOnAction(MouseEvent mouseEvent) {
         send();
     }
@@ -88,6 +125,8 @@ public class LiveChatFormController extends Thread{
 
     }
 
-    public void btnSendPhotoOnAction(MouseEvent mouseEvent) {
+    public void btnSendPhotoOnAction(MouseEvent mouseEvent) throws IOException {
+        sendPhoto();
+
     }
 }
