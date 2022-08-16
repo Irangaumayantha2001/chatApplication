@@ -91,7 +91,8 @@ public class LiveChatFormController extends Thread{
     }
 
     public void sendPhoto() throws IOException {
-      /*  File selectedFile = fileChooser.showOpenDialog(stage);
+       /*
+        File selectedFile = fileChooser.showOpenDialog(stage);
 
         if (selectedFile!=null) {
 
@@ -107,7 +108,7 @@ public class LiveChatFormController extends Thread{
 
             byte[] frame = ArrayUtils.addAll(header,payload);
 
-            ClientHandler.getOut().write(-1);
+            ClientHandler.getOutputStream().write(-1);
             ClientHandler.getOut().write(frame);
 
             ClientHandler.getOut().flush();
